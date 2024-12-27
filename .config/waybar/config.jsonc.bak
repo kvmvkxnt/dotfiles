@@ -1,0 +1,153 @@
+[{
+	"output": ["DP-1"],
+	"height": 24,
+	"spacing": 4,
+	"modules-left": [
+		"hyprland/workspaces",
+		"cava",
+		"hyprland/submap",
+		"hyprland/scratchpad" //need to be tested
+	],
+	"modules-center": [
+		"hyprland/window"
+	],
+	"modules-right": [
+		"mpris",
+		"idle_inhibitor",
+		"load",
+		"wireplumber",
+		"backlight",
+		"temperature",
+		"clock",
+		"tray"
+	],
+
+	"hyprland/workspaces": {
+		"all-outputs": true,
+		"warp-on-scroll": false,
+		"enable-bar-scroll": true,
+		"disable-scroll-wraparound": true,
+		"format": "{icon}",
+		"format-icons": {
+			"1": "",
+			"2": "",
+            		"3": "",
+            		"4": "",
+            		"5": "",
+            		"9": "",
+            		"10": ""
+		}
+	},
+
+	"hyprland/window": {
+		"format": "{title}",
+		"max-length": 40,
+		"all-outputs": true
+	},
+	
+	"cava": {
+		"framerate": 60,
+		"autosens": 1,
+		"bars": 14,
+		"lower_cutoff_freq": 50,
+		"method": "pipewire",
+		"source": "auto",
+		"stereu": true,
+		"bar_delimiter": 0,
+		"noise_reduction": 0.77,
+		"input_delay": 2,
+		"hide_on_silence": false,
+		"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+		"actions": {
+			"on-click-right": "mode"
+		}
+	},
+
+	"mpris": {
+		"format": "  {status_icon} {dynamic}",
+		"interval": 1,
+		"dynamic-len": 50,
+		"status-icons": {
+			"playing": "▶",
+			"paused": "⏸",
+			"stopped": ""
+		},
+		"dynamic-order": ["title", "artist"],
+		"ignored-players": ["firefox"]
+	},
+
+	"idle_inhibitor": {
+		"format": "{icon}",
+		"format-icons": {
+			"activated": "",
+            		"deactivated": ""
+		}
+	},
+
+	"hyprland/submap": {
+		"format": "{}"
+	},
+
+	"hyprland/scratchpad": {
+		"format": "{icon} {count}",
+		"show-empty": false,
+		"format-icons": ["", ""],
+		"tooltip": true,
+		"tooltip-format": "{app}: {title}"	
+	},
+
+	"tray": {
+		"icon-size": 26,
+		"spacing": 10
+	},
+
+	"load": {
+		"format": " {}"
+	},
+
+	"clock": {
+		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+		"format-alt": "{:%d-%m-%Y}"
+	},
+
+
+	"cpu": {
+		"format": "{usage}% ",
+		"tooltip": false
+	},
+
+	"memory": {
+		"format": "{}% "
+	},
+
+	"temperature": {
+		"thermal-zone": 2,
+		"critical-threshold": 80,
+        	// "format-critical": "{temperatureC}°C {icon}",
+        	"format": "{temperatureC}°C {icon}",
+        	"format-icons": ["", "", ""]
+	},
+
+	"backlight": {
+		"format": "{icon} {percent}%",
+        	"format-icons": ["", "", "", "", "", "", "", "", ""]
+	},
+
+	"wireplumber": {
+		"scroll-step": 5, // %, can be a float
+        	"format": "{icon} {volume}%",
+        	"format-bluetooth": "{icon} {volume}% ",
+        	"format-bluetooth-muted": " {icon}",
+        	"format-muted": "",
+        	"format-icons": {
+        	    "headphone": "",
+        	    "hands-free": "",
+        	    "headset": "",
+        	    "phone": "",
+        	    "portable": "",
+        	    "car": "",
+        	    "default": ["", "", ""]
+        	},
+        	"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+	}
+}]

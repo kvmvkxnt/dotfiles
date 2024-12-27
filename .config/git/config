@@ -1,0 +1,14 @@
+[user]
+	name = kvmvkxnt
+	email = kamron1007dada@gmail.com
+	password = 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
+	token = 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
+[core]
+	editor = nvim
+[credential]
+	credentialStore = cache
+	helper = cache
+	helper = 
+	helper = /usr/local/bin/git-credential-manager
+[credential "https://dev.azure.com"]
+	useHttpPath = true
